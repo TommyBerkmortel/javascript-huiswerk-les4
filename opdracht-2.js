@@ -10,7 +10,10 @@ console.log(`totalSold`, totalSold);
 
 
 const sold = document.getElementById(`verkocht`);
-sold.textContent = totalSold;
+sold.innerHTML = `
+<h3>Tv's verkocht</h3>
+<p>${totalSold}</p>
+`;
 
 // Opdracht 2c: Hoeveel tv's heeft Tech It Easy ingekocht? Schrijf een script dat dit berekent. Log de uitkomst in de console.
 
@@ -23,12 +26,18 @@ console.log(`totalStock`, totalStock);
 // Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
 
 const stock = document.getElementById(`voorraad`);
-stock.textContent = totalStock;
+stock.innerHTML = `
+<h3>Tv's nog op voorraad</h3>
+<p>${totalStock}</p>
+`;
 
 // Opdracht 2e: Geef in het rood weer hoeveel tv's er nog verkocht moeten worden.
 
 const toBeSold = document.getElementById(`verschil`);
-toBeSold.textContent = totalStock - totalSold;
+toBeSold.innerHTML = `
+<h3>Tv's nog te verkopen</h3>
+<p>${totalStock-totalSold}</p>
+`;
 
 
 

@@ -3,7 +3,24 @@
 const tvBrand = inventory.map((tv) => {
     return tv.brand;
 })
-/*console.log(tvBrand)*/
+
+const tvBrands = document.getElementById(`tvBrands`);
+tvBrands.innerHTML = tvBrand.join(`<li>`);
+;
+
+// Opdracht 3b: Schrijf de code uit 3a om naar een functie die een array met tv-objecten verwacht. Het is handig om onze scripts als functies op te zetten, zodat we ze gemakkelijk kunnen hergebruiken. Tip: vergeet deze functie -declaratie niet aan te roepen!
+
+function arrayToHtmlList (someTvArray){
+    const tvBrand = someTvArray.map((brands) => {
+        return brands.brand;
+    })
+    const tvBrandAv = document.getElementById(`brandsAv`);
+    tvBrandAv.innerHTML = tvBrand.join(`<li>`);
+}
+arrayToHtmlList(inventory)
+
+
+
 
 
 
